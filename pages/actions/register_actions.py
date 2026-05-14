@@ -52,6 +52,17 @@ class RegisterActions(BaseActions):
         
     def upload_file(self):
         self._upload_file(Register.upload_file)
-        
 
+    def state(self):
+        self.element_double_click(Register.inputState, Register.optionState)
+
+    def scroll_to_state(self):
+        self.remove_ads()
+        self.scroll_to_element(Register.footer)
+    
+    def city(self):
+        self.element_double_click(Register.inputCity, Register.optionCity)
+        
+    def click_submit(self):
+        self.element_click(Register.footer)
     

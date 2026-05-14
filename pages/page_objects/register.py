@@ -16,4 +16,8 @@ class Register:
     optionSubject=(By.XPATH, "//div[@id='react-select-2-option-0']")
     hobbie=(By.XPATH, "//input[@id='hobbies-checkbox-1']")
     upload_file=(By.XPATH, "//input[@id='uploadPicture']")
-    
+    inputState=(By.XPATH, "//div[@class='css-1wy0on6']")
+    optionState=(By.XPATH, "//div[@id='react-select-3-option-0']")
+    footer=(By.XPATH, "//button[@id='submit']")
+    inputCity=(By.XPATH, "//div[@class='css-1xc3v61-indicatorContainer']")
+    optionCity=(By.XPATH, "//div[@id='react-select-4-option-0']")
