@@ -1,6 +1,7 @@
 from selenium.webdriver.support.wait import  WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+import os
 
 class BaseActions:
 
@@ -47,3 +48,15 @@ class BaseActions:
             user.is_enabled()
         else:
             return False
+        
+    def _upload_file(self, by_locator):
+        user = self._wait_for_element(by_locator)
+        if user:
+            user.is_displayed()
+            upload_file = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "avatar.jpg"))
+            #print(f"variable: {upload_file}")
+            user.send_keys(upload_file)
+        else:
+            raise Exception("Cant click on the element")
+
+      

@@ -1,6 +1,19 @@
 from selenium.webdriver.common.by import By
 
 class Register:
-    emailInput=(By.XPATH, "//input[@data-qa='login-email']")
+    nameInput=(By.XPATH, "//input[@id='firstName']")
+    lastnameInput=(By.XPATH, "//input[@id='lastName']")
+    emailInput=(By.XPATH, "//input[@id='userEmail']")
     passInput=(By.XPATH, "//input[@data-qa='login-password']")
     loginButton=(By.XPATH, "//button[@data-qa='login-button']")
+    gender=(By.XPATH, "//input[@id='gender-radio-2']")
+    mobileInput=(By.XPATH, "//input[@id='userNumber']")
+    birth=(By.XPATH, "//input[@id='dateOfBirthInput']")
+    month=(By.XPATH, "//select[@class='react-datepicker__month-select']/option[@value='9']")
+    year=(By.XPATH, "//select[@class='react-datepicker__year-select']/option[@value='1995']")
+    day=(By.XPATH, "//div[@class='react-datepicker__day react-datepicker__day--016']")
+    subjectInput=(By.XPATH, "//input[@id='subjectsInput']")
+    optionSubject=(By.XPATH, "//div[@id='react-select-2-option-0']")
+    hobbie=(By.XPATH, "//input[@id='hobbies-checkbox-1']")
+    upload_file=(By.XPATH, "//input[@id='uploadPicture']")
+    
