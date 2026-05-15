@@ -1,0 +1,22 @@
+# Created by pytest automatically.
+
+# Cache de pytest
+.pytest_cache/
+
+# VS Code
+.vscode/
+
+# Cache de Python (aplica a todas las subcarpetas)
+__pycache__/
+
+# Entorno virtual
+venv/
+
+# Variables de entorno
+.env
+
+# Reportes
+report.html
+
+# macOS
+.DS_Store
