@@ -1,18 +1,12 @@
-from selenium import webdriver
 from pages.actions.register_actions import RegisterActions
 # import allure
 
-import pytest
 import time
 
 # @allure.suite("lading page")
 # @allure.title("registration from userpyt")
 
-@pytest.fixture
-def driver():
-    driver = webdriver.Chrome()
-    yield driver
-    driver.quit()
+
 
 def test_login(driver):
     
