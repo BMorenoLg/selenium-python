@@ -12,7 +12,7 @@ def driver():
     options.add_argument("--disable-gpu")
     options.binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 
-    
-    driver = webdriver.Chrome(options=options)
+    service = Service(r"C:\chromedriver\chromedriver.exe")
+    driver = webdriver.Chrome(service=service, options=options)
     yield driver
     driver.quit()
