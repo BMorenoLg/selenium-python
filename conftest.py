@@ -10,6 +10,8 @@ def driver():
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--window-size=1920,1080")
     options.add_argument("--disable-gpu")
+    options.binary_location = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+
     
     driver = webdriver.Chrome(options=options)
     yield driver
