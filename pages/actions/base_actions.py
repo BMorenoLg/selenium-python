@@ -25,10 +25,11 @@ class BaseActions:
 
     def element_click(self, by_locator):
         user = self._wait_for_element(by_locator)
-        if user:
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", user)
+        try:
             user.click()
-        else:
-            raise Exception("Cant click on the element")
+        except:
+            self.driver.execute_script("arguments[0].click();", user)
 
     def type_info(self, by_locator, keyword):
         user = self._wait_for_element(by_locator)
